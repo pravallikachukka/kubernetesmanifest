@@ -1,10 +1,10 @@
-node {
+pipeline {
     def app
 
     stage('checkout') {
         steps {
             echo 'cloning stage'
-            git branch: 'main', url: 'https://github.com/pravallikachukka/kubernetescode.git'
+            git branch: 'main', url: 'https://github.com/pravallikachukka/kubernetesmanifest.git'
         }
       }
 
