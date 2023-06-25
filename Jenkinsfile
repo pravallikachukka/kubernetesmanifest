@@ -4,11 +4,11 @@ pipeline {
 
     stages {
         stage('checkout') {
-        steps {
-            echo 'cloning stage'
-            git branch: 'main', url: 'https://github.com/pravallikachukka/kubernetesmanifest.git'
+            steps {
+                echo 'cloning stage'
+                git branch: 'main', url: 'https://github.com/pravallikachukka/kubernetesmanifest.git'
+            }
         }
-    }
     stage('Update GIT') {
             script {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
