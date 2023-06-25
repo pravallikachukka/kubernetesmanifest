@@ -1,11 +1,12 @@
 node {
     def app
 
-    stage('Clone repository') {
-      
-
-        checkout scm
-    }
+    stage('checkout') {
+        steps {
+            echo 'cloning stage'
+            git branch: 'main', url: 'https://github.com/pravallikachukka/kubernetescode.git'
+        }
+      }
 
     stage('Update GIT') {
             script {
