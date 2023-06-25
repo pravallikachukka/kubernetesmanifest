@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: chukkap/flaskapp:latest
+      - image: chukkap/flaskapp:22
         name: flaskdemo
         resources: {}
 status: {}
