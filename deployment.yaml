@@ -1,35 +1,35 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-boot-app
+  name: nginx-deployment
   labels:
-    app: spring-boot-app
+    app: nginx
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
-      app: spring-boot-app
+      app: nginx
   template:
     metadata:
       labels:
-        app: spring-boot-app
+        app: nginx
     spec:
       containers:
-      - name: spring-boot-app
-        image: chukkap/flaskapp:31
+      - name: nginx
+        image: chukkap/flaskapp:30
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-boot-app-service
+  name: lb-service
+  labels:
+    app: lb-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - name: http
-    port: 80
-    targetPort: 8080
-    protocol: TCP
+  - port: 80
+    targetPort: 5000
   selector:
-    app: spring-boot-app
+    app: nginx
