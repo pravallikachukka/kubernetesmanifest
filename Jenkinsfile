@@ -19,6 +19,7 @@ pipeline {
                             sh "git config user.email pravallika@gmail.com"
                             sh "git config user.name pravallikachukka"
                             //sh "git switch master"
+                            sh "cd deploymentFolder/"
                             sh "cat deployment.yaml"
                             sh "sed -i 's+chukkap/flaskapp.*+chukkap/flaskapp:${DOCKERTAG}+g' deployment.yaml"
                             sh "cat deployment.yaml"
