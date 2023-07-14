@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: chukkap/flaskapp:30
+        image: chukkap/flaskapp:33
         ports:
         - containerPort: 5000
 ---
