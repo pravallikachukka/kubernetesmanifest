@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-deployment
+  namespace: default
   labels:
     app: nginx
 spec:
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: chukkap/flaskapp:32
+        image: chukkap/flaskapp:30
         ports:
         - containerPort: 5000
 ---
@@ -24,6 +25,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: lb-service
+  namespace: default
   labels:
     app: lb-service
 spec:
