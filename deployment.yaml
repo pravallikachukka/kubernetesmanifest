@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: chukkap/kubernetesproject:1
+        image: chukkap/kubernetesproject:9
         ports:
         - containerPort: 8081
 ---
