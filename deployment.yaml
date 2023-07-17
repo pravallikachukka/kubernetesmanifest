@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: chukkap/flaskapp:34
+        image: chukkap/kubernetesproject:3
         ports:
         - containerPort: 5000
 ---
