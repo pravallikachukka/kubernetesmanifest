@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: java-app-container
-        image: chukkap/kubernetesproject:10
+        image: chukkap/kubernetesproject:12
         ports:
         - containerPort: 8081
 ---
