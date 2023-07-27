@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-springboot-app
-        image: chukkap/springbootapp:latest
+        image: chukkap/springbootapp:19
         imagePullPolicy: Always
         ports:
         - containerPort: 8085
